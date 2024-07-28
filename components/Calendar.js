@@ -13,10 +13,12 @@ const MyCalendar = () => {
   const events = useSelector((state) => state.events.events);
   const [date, setDate] = useState(selectedDate);
 
+  // Update local state when the selected date changes in the Redux store
   useEffect(() => {
     setDate(selectedDate);
   }, [selectedDate]);
 
+  // Handler for date change in the calendar
   const handleDateChange = (newDate) => {
     setDate(newDate);
     dispatch(setSelectedDate(newDate));
