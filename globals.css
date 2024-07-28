@@ -1,0 +1,201 @@
+/* app/globals.css */
+/* Base styling for calendar container */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f7f9fc; /* Very light grey for a clean background */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Calendar container styling */
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  background: linear-gradient(145deg, #ffffff, #f0f4f8); /* Subtle gradient background */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.calendar-container:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+/* Calendar styling */
+.react-calendar {
+  border: 1px solid #d0d9e1; /* Light border for a clean look */
+  border-radius: 12px;
+  font-family: 'Arial', sans-serif;
+}
+
+.react-calendar__tile {
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.calendar-event-marker {
+  width: 8px;
+  height: 8px;
+  background-color: red; /* Bright cyan color for event markers */
+  border-radius: 50%;
+  margin: auto;
+}
+
+.react-calendar__tile:active,
+.react-calendar__tile:focus {
+  background-color: #e5f8fa; /* Light cyan for active tile */
+  color: #00796b; /* Teal text for active tile */
+}
+
+.react-calendar__tile--now {
+  background-color: #bce9fd; /* Light blue for today's date */
+  color: #0277bd; /* Darker blue text for today's date */
+}
+
+.react-calendar__tile--hasActive {
+  background-color: #d7f3f7; /* Light cyan for tiles with events */
+  color: #00796b; /* Teal text for tiles with events */
+}
+
+/* Event form styling */
+.event-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(145deg, #ffffff, #f9f9f9); /* Subtle gradient background */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.event-form:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #b0bec5; /* Light grey border */
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #26c6da; /* Bright cyan border for focused inputs */
+  outline: none;
+}
+
+button {
+  padding: 11px 22px;
+  border: none;
+  border-radius: 10px;
+  background-color: #26c6da; /* Bright cyan background for buttons */
+  color: black;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #00acc1; /* Darker cyan on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: scale(0.96); /* Slightly shrink button when clicked */
+}
+
+/* Navigation buttons styling for the calendar */
+.calendar-nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: #26c6da; /* Bright cyan background for navigation buttons */
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.calendar-nav-button:hover {
+  background: #00acc1; /* Darker cyan on hover */
+  transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+.calendar-nav-button:active {
+  transform: scale(1); /* Slightly shrink button when clicked */
+}
+
+/* Event list styling */
+.event-list {
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #ffffff, #f9f9f9); /* Subtle gradient background */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.event-list h2 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #0277bd; /* Teal color for headers */
+}
+
+.event-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0; /* Light grey border for list items */
+  transition: background-color 0.3s ease;
+}
+
+.event-list li:hover {
+  background-color: #e0f7fa; /* Light cyan on hover */
+  transform: translateX(5px); /* Subtle shift effect on hover */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 600px) {
+  .event-form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .calendar-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .react-calendar {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
