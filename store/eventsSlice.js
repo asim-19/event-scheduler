@@ -27,7 +27,7 @@ const eventsSlice = createSlice({
       if (index !== -1) {
         state.events[index] = action.payload;
       }
-      //existing
+    
     },
     // Delete an event by id
     deleteEvent(state, action) {
