@@ -16,7 +16,6 @@ const EventForm = ({ editEventId }) => {
    // Populate form fields when editing an event
   useEffect(() => {
     if (editEventId) {
-      addone
       const eventToEdit = events.find(event => event.id === editEventId);
       if (eventToEdit) {
         setDescription(eventToEdit.description);
