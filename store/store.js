@@ -5,7 +5,7 @@
 
  // Create and configure the Redux store
  export const store = configureStore({
-   reducer: {
+   reducer: {use
      events: eventsReducer,
    },
  });
