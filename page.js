@@ -23,7 +23,7 @@ export default function HomePage() {
       <div className="container">
         <h1>Event Scheduler</h1>
         <MyCalendar />
-        <EventForm editEventId={editEventId} />
+        <EventForm editEventId={editEventId=\} />
         <EventList onEdit={handleEditEvent} />
       </div>
     </main>
